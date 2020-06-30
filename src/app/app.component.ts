@@ -30,8 +30,11 @@ export class AppComponent implements OnInit{
     name, lastname1,
      lastname2, ssn,
       postalCode,birthday,
-       email, password){
+       email, password, confirmPassword){
 
+        if(password != confirmPassword){
+          alert('Las contraseñas no coinciden');
+        }else{
           alert(' Name: '+ name+
           '\n Apellido paterno: '+ lastname1 +
           '\n Apellido materno: '+ lastname2 +
@@ -40,6 +43,7 @@ export class AppComponent implements OnInit{
           '\n Fecha de nacimiento: '+ birthday +
           '\n Correo electrónico: '+ email + 
           '\n Contraseña: '+ password);
+        }
   }
 
   ngOnInit() {
